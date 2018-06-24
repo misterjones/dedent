@@ -1,14 +1,3 @@
-// Will remove in next commit; keeping for historical sake.
-// I wrote this before realizing that `String.raw()` was a thing.
-// If I discover some unexpected "gotcha" behavior with `String.raw()`,
-// I will fall back on this function.
-const assembleTemplateLiteral = function assembleTemplateLiteral(strings, keys) {
-  return strings.reduce(
-    (templateLiteral, string, i) => templateLiteral += string + (keys[i] || ''),
-    ''
-  )
-}
-
 const isTemplateStringObject = function isTemplateStringObject(variable) {
   return (Array.isArray(variable) && variable.hasOwnProperty('raw'))
 }
