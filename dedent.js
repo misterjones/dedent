@@ -19,8 +19,8 @@ const dedent = function dedentMultilineTemplateOrStringLiteral(strings, ...keys)
     : strings
   )
 
-	const lines = splitIntoLines(string)
-	const baselineIndentation = minimumLeadingWhitespaceOf(lines)
+  const lines = splitIntoLines(string)
+  const baselineIndentation = minimumLeadingWhitespaceOf(lines)
 
   const dedentedString = (
     lines
@@ -32,4 +32,3 @@ const dedent = function dedentMultilineTemplateOrStringLiteral(strings, ...keys)
 }
 
 export default dedent
-
